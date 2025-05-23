@@ -437,52 +437,108 @@ footer .social-links a:hover {
     color: var(--primary-color) !important;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .carousel-caption h1 {
-        font-size: 2.5rem;
-    }
-    
-    .carousel-caption .lead {
-        font-size: 1rem;
-    }
-    
-    .section-title {
-        font-size: 2rem;
-    }
-    
-    .timeline {
-        padding-left: 1rem;
-    }
-    
-    .timeline-item {
-        padding-left: 1.5rem;
-    }
-    
-    .price-tag .amount {
-        font-size: 2.5rem;
-    }
-    
-    .navbar-nav .nav-link {
-        margin: 0.25rem 0;
-    }
+/* Tracks Section: 2 items per row */
+.tracks-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
 }
 
-@media (max-width: 576px) {
-    .carousel-caption h1 {
-        font-size: 2rem;
-    }
-    
-    section {
+/* Force 2 items per row in the tracks section regardless of Bootstrap grid */
+#tracks .row.g-4 > [class*="col-"] {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+@media (max-width: 991.98px) {
+  #tracks .row.g-4 > [class*="col-"] {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Team & Committees Section Styles */
+.about-section {
+    background: #f8f9fa;
+    padding: 5rem 0;
+}
+
+.about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 2.5rem 2rem;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.about-header .section-title {
+    color: var(--primary-color);
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.about-header .section-subtitle {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+.about-content {
+    margin-top: 1.5rem;
+}
+
+.about-box {
+    background: var(--light-bg);
+    border-radius: var(--border-radius);
+    padding: 2rem 1.5rem;
+    box-shadow: 0 1px 6px rgba(44,90,160,0.06);
+}
+
+.team-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.team-list li {
+    margin-bottom: 1.2rem;
+    font-size: 1.08rem;
+    color: var(--dark);
+    border-left: 3px solid var(--primary-color);
+    padding-left: 1rem;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(44,90,160,0.04);
+}
+
+.team-list li strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .about-section {
         padding: 3rem 0;
     }
-    
-    .card-body {
-        padding: 1.5rem;
+    .about-container {
+        padding: 1.2rem 0.5rem;
     }
-    
-    .sponsor-logo {
-        height: 100px;
+    .about-header .section-title {
+        font-size: 1.4rem;
+    }
+    .about-box {
+        padding: 1rem 0.5rem;
+    }
+    .team-list li {
+        font-size: 0.98rem;
+        padding-left: 0.7rem;
     }
 }
 
@@ -621,6 +677,115 @@ footer .social-links a:hover {
     color: var(--accent-color);
 }
 
+/* CONTACT US: Make contact info items display horizontally within the card */
+.contact-info-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.contact-info-horizontal .contact-item {
+  flex: 1 1 0;
+  min-width: 180px;
+  margin-bottom: 0;
+  border-right: 1px solid #eee;
+  padding-right: 2rem;
+}
+.contact-info-horizontal .contact-item:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+@media (max-width: 991.98px) {
+  .contact-info-horizontal {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .contact-info-horizontal .contact-item {
+    border-right: none;
+    padding-right: 0;
+    min-width: 0;
+  }
+}
+
+/* Contact Us Section Styles */
+#contact .section-header {
+    margin-bottom: 2.5rem;
+}
+#contact .section-title {
+    color: var(--primary-color);
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+#contact .card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border: none;
+    transition: var(--transition);
+}
+#contact .card:hover {
+    box-shadow: var(--box-shadow-hover);
+    transform: translateY(-3px);
+}
+#contact .card-body {
+    padding: 2rem 1.5rem;
+}
+#contact .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid #e9ecef;
+}
+#contact .contact-item:last-child {
+    border-bottom: none;
+}
+#contact .contact-item i {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-top: 0.2rem;
+}
+#contact .contact-item strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+#contact .contact-item .text-muted {
+    color: var(--secondary-color) !important;
+    font-size: 1rem;
+}
+
+/* Contact Us Section: 2 items per row for contact info */
+#contact .row.g-4 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+#contact .row.g-4 > .col-lg-4 {
+    flex: 0 0 48%;
+    max-width: 48%;
+}
+@media (max-width: 991.98px) {
+  #contact .row.g-4 > .col-lg-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+    #contact .card-body {
+        padding: 1.2rem 0.7rem;
+    }
+    #contact .section-title {
+        font-size: 1.4rem;
+    }
+    #contact .contact-item {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.8rem 0;
+    }
+}
+
 /* Print Styles */
 @media print {
     .navbar,
@@ -642,3 +807,5 @@ footer .social-links a:hover {
         border: 1px solid #dee2e6;
     }
 }
+
+
