@@ -36,20 +36,26 @@
             </button>
             
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#call-for-papers">Call for Papers</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#important-dates">Important Dates</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#tracks">Tracks</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#registration">Registration</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#author-instructions">Author Instructions</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#sponsors">Sponsors</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#committee">Committee</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#venue">Venue</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
+                <div class="navbar-nav-wrapper ms-auto">
+                    <!-- First row of navigation -->
+                    <ul class="navbar-nav nav-row-1 mb-1">
+                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#call-for-papers">Call for Papers</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#important-dates">Important Dates</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#tracks">Tracks</a></li>
+                    </ul>
+                    <!-- Second row of navigation -->
+                    <ul class="navbar-nav nav-row-2">
+                        <li class="nav-item"><a class="nav-link" href="#registration">Registration</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#author-instructions">Author Instructions</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#sponsors">Sponsors</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#committee">Committee</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#venue">Venue</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
@@ -245,6 +251,28 @@
                     <div class="section-header text-center mb-5">
                         <h2 class="section-title">Important Dates</h2>
                         <div class="title-underline"></div>
+                        <!-- Countdown Timer -->
+                        <div class="countdown-timer mt-4">
+                            <h4 class="text-primary mb-3">Time to Paper Submission Deadline</h4>
+                            <div class="countdown-display d-flex justify-content-center gap-4 flex-wrap">
+                                <div class="countdown-unit">
+                                    <div class="countdown-number" id="days">00</div>
+                                    <div class="countdown-label">Days</div>
+                                </div>
+                                <div class="countdown-unit">
+                                    <div class="countdown-number" id="hours">00</div>
+                                    <div class="countdown-label">Hours</div>
+                                </div>
+                                <div class="countdown-unit">
+                                    <div class="countdown-number" id="minutes">00</div>
+                                    <div class="countdown-label">Minutes</div>
+                                </div>
+                                <div class="countdown-unit">
+                                    <div class="countdown-number" id="seconds">00</div>
+                                    <div class="countdown-label">Seconds</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -314,6 +342,64 @@
                 </div>
             </div>
             
+            <!-- Published Professors Section -->
+            <div class="row mb-5">
+                <div class="col-lg-12">
+                    <h3 class="text-primary text-center mb-4">Distinguished Authors Who Published With Us</h3>
+                    <div class="row g-4">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card h-100 border-0 shadow-sm text-center">
+                                <div class="card-body p-4">
+                                    <div class="avatar-placeholder bg-primary text-white rounded-circle mx-auto mb-3">
+                                        <i class="fas fa-user-tie fs-1"></i>
+                                    </div>
+                                    <h5 class="text-primary">Dr. Rajesh Kumar</h5>
+                                    <p class="text-muted small">IIT Delhi</p>
+                                    <p class="small">"Heat Transfer in Nanofluids"</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card h-100 border-0 shadow-sm text-center">
+                                <div class="card-body p-4">
+                                    <div class="avatar-placeholder bg-success text-white rounded-circle mx-auto mb-3">
+                                        <i class="fas fa-user-tie fs-1"></i>
+                                    </div>
+                                    <h5 class="text-primary">Dr. Priya Sharma</h5>
+                                    <p class="text-muted small">IISc Bangalore</p>
+                                    <p class="small">"Solar Energy Systems"</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card h-100 border-0 shadow-sm text-center">
+                                <div class="card-body p-4">
+                                    <div class="avatar-placeholder bg-info text-white rounded-circle mx-auto mb-3">
+                                        <i class="fas fa-user-tie fs-1"></i>
+                                    </div>
+                                    <h5 class="text-primary">Dr. Michael Chen</h5>
+                                    <p class="text-muted small">MIT, USA</p>
+                                    <p class="small">"CFD Applications"</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card h-100 border-0 shadow-sm text-center">
+                                <div class="card-body p-4">
+                                    <div class="avatar-placeholder bg-warning text-white rounded-circle mx-auto mb-3">
+                                        <i class="fas fa-user-tie fs-1"></i>
+                                    </div>
+                                    <h5 class="text-primary">Dr. Sarah Johnson</h5>
+                                    <p class="text-muted small">Cambridge University</p>
+                                    <p class="small">"Sustainable Energy"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Publication Options -->
             <div class="row g-4">
                 <div class="col-lg-6">
                     <div class="card h-100 border-0 shadow-sm">
@@ -428,7 +514,131 @@
                         </div>
                     </div>
                 </div>
-                
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="registration" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-header text-center mb-5">
+                        <h2 class="section-title">Registration</h2>
+                        <div class="title-underline"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead class="table-primary">
+                                        <tr>
+                                            <th scope="col">Category</th>
+                                            <th scope="col">Early Bird (Before May 1)</th>
+                                            <th scope="col">Regular (After May 1)</th>
+                                            <th scope="col">On-site Registration</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Students (Indian)</strong></td>
+                                            <td>₹ 3,000</td>
+                                            <td>₹ 4,000</td>
+                                            <td>₹ 5,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Students (Foreign)</strong></td>
+                                            <td>$ 100</td>
+                                            <td>$ 150</td>
+                                            <td>$ 200</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Academics (Indian)</strong></td>
+                                            <td>₹ 6,000</td>
+                                            <td>₹ 8,000</td>
+                                            <td>₹ 10,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Academics (Foreign)</strong></td>
+                                            <td>$ 200</td>
+                                            <td>$ 300</td>
+                                            <td>$ 400</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Industry (Indian)</strong></td>
+                                            <td>₹ 10,000</td>
+                                            <td>₹ 12,000</td>
+                                            <td>₹ 15,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Industry (Foreign)</strong></td>
+                                            <td>$ 400</td>
+                                            <td>$ 500</td>
+                                            <td>$ 600</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <div class="mt-4">
+                                <h5 class="text-primary mb-3">Registration Includes:</h5>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Conference proceedings</li>
+                                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Welcome kit</li>
+                                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>All technical sessions</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Tea/Coffee breaks</li>
+                                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Lunch on all days</li>
+                                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Certificate of participation</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center mt-4">
+                                <a href="#contact" class="btn btn-primary btn-lg">Register Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Author Instructions Section -->
+    <section id="author-instructions" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-header text-center mb-5">
+                        <h2 class="section-title">Author Instructions</h2>
+                        <div class="title-underline"></div>
+                        <!-- Quick Links Section -->
+                        <div class="quick-links mt-4">
+                            <h4 class="text-primary mb-3">Quick Links</h4>
+                            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                                <a href="#call-for-papers" class="btn btn-outline-primary btn-sm">Paper Submission</a>
+                                <a href="#important-dates" class="btn btn-outline-primary btn-sm">Important Dates</a>
+                                <a href="#registration" class="btn btn-outline-primary btn-sm">Registration</a>
+                                <a href="#venue" class="btn btn-outline-primary btn-sm">Venue Info</a>
+                                <a href="#contact" class="btn btn-outline-primary btn-sm">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row g-4">
                 <div class="col-lg-4">
                     <div class="card h-100 border-0 shadow-sm">
                         <div class="card-body p-4 text-center">

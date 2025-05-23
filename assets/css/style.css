@@ -1,11 +1,13 @@
 /* Custom CSS for ICTSSE 2024 Conference Website */
 
-/* CSS Variables */
+/* CSS Variables - Updated Color Scheme */
 :root {
-    --primary-color: #800000; /* NIT Warangal Maroon */
-    --primary-dark: #600000;
-    --primary-light: #a00000;
+    --primary-color: #2c5aa0; /* Deep Blue */
+    --primary-dark: #1a3b70;
+    --primary-light: #4a7bc8;
     --secondary-color: #6c757d;
+    --accent-color: #ff6b35; /* Orange accent */
+    --success-color: #28a745;
     --light-bg: #f8f9fa;
     --white: #ffffff;
     --dark: #212529;
@@ -72,18 +74,46 @@ html {
     margin-bottom: 0;
 }
 
+.navbar-nav-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.navbar-nav {
+    margin-bottom: 0;
+}
+
 .navbar-nav .nav-link {
     color: var(--dark) !important;
     font-weight: 500;
-    margin: 0 0.5rem;
-    padding: 0.5rem 1rem !important;
+    margin: 0 0.3rem;
+    padding: 0.4rem 0.8rem !important;
     border-radius: var(--border-radius);
     transition: var(--transition);
+    font-size: 0.9rem;
 }
 
 .navbar-nav .nav-link:hover {
     color: var(--primary-color) !important;
-    background-color: rgba(128, 0, 0, 0.1);
+    background-color: rgba(44, 90, 160, 0.1);
+}
+
+@media (max-width: 991px) {
+    .navbar-nav-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+    
+    .navbar-nav {
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .nav-row-1, .nav-row-2 {
+        width: 100%;
+    }
 }
 
 /* Hero Section Styles */
@@ -485,6 +515,110 @@ footer .social-links a:hover {
 
 .border-primary {
     border-color: var(--primary-color) !important;
+}
+
+/* Countdown Timer Styles */
+.countdown-timer {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    color: var(--white);
+}
+
+.countdown-display {
+    margin-top: 1rem;
+}
+
+.countdown-unit {
+    text-align: center;
+    min-width: 80px;
+}
+
+.countdown-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    backdrop-filter: blur(10px);
+}
+
+.countdown-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Sponsor Carousel Styles */
+.sponsor-carousel {
+    overflow: hidden;
+}
+
+.sponsor-slide {
+    display: flex;
+    animation: scroll 20s linear infinite;
+}
+
+.sponsor-item {
+    flex: 0 0 200px;
+    padding: 1rem;
+    text-align: center;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+.sponsor-slide:hover {
+    animation-play-state: paused;
+}
+
+/* Committee Table Styles */
+.committee-table {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+.committee-table th {
+    background: var(--primary-color);
+    color: var(--white);
+    font-weight: 600;
+    border: none;
+    padding: 1rem;
+}
+
+.committee-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.committee-table tbody tr:hover {
+    background-color: rgba(44, 90, 160, 0.05);
+}
+
+/* Contact Section Styles */
+.contact-info-card {
+    background: var(--primary-color);
+    color: var(--white);
+    border-radius: var(--border-radius);
+}
+
+.contact-info-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1.5rem 0;
+}
+
+.contact-info-item:last-child {
+    border-bottom: none;
+}
+
+.contact-info-item i {
+    color: var(--accent-color);
 }
 
 /* Print Styles */

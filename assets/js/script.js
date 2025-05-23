@@ -22,6 +22,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize responsive behavior
     initResponsiveBehavior();
+    
+    // Initialize countdown timer
+    initCountdownTimer();
 });
 
 /**
@@ -510,6 +513,42 @@ function initLazyLoading() {
 
 // Initialize lazy loading
 initLazyLoading();
+
+/**
+ * Initialize countdown timer
+ */
+function initCountdownTimer() {
+    // Set the target date for countdown (March 15, 2024 - Paper submission deadline)
+    const targetDate = new Date('2024-03-15T23:59:59').getTime();
+    
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const timeLeft = targetDate - now;
+        
+        if (timeLeft > 0) {
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+            
+            // Update countdown display
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        } else {
+            // Countdown expired
+            document.getElementById('days').textContent = '00';
+            document.getElementById('hours').textContent = '00';
+            document.getElementById('minutes').textContent = '00';
+            document.getElementById('seconds').textContent = '00';
+        }
+    }
+    
+    // Update countdown immediately and then every second
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+}
 
 // Add error handling for failed resource loads
 window.addEventListener('error', function(e) {
