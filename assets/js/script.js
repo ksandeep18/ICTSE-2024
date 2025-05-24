@@ -1,4 +1,4 @@
-// Custom JavaScript for ICTSSE 2024 Conference Website
+// Custom JavaScript for ICTSSE 2026 Conference Website
 
 document.addEventListener('DOMContentLoaded', function() {
     
