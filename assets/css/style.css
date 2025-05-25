@@ -929,4 +929,58 @@ footer .social-links a:hover {
     }
 }
 
+.slider-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent 0%, #fff 8%, #fff 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #fff 8%, #fff 92%, transparent 100%);
+}
 
+.slider-track {
+  display: flex;
+  width: max-content;
+  animation: scrollLoop 18s linear infinite;
+  will-change: transform;
+}
+
+.slider-wrapper:hover .slider-track {
+  animation-play-state: paused;
+}
+
+/* .speaker-card {
+  min-width: 250px;
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+@keyframes scrollLoop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Optional: Edge gradient mask for escalator effect */
+.slider-wrapper {
+  position: relative;
+  mask-image: linear-gradient(to right, transparent 0%, #fff 8%, #fff 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #fff 8%, #fff 92%, transparent 100%);
+}
+
+@media (max-width: 700px) {
+  .speaker-card {
+    min-width: 180px;
+    padding: 0.7rem 0.5rem;
+  }
+}

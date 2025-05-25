@@ -555,6 +555,8 @@ function initCountdownTimer() {
     setInterval(updateCountdown, 1000);
 }
 
+
+
 // Add error handling for failed resource loads
 window.addEventListener('error', function(e) {
     console.warn('Resource failed to load:', e.target.src || e.target.href);
